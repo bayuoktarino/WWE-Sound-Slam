@@ -1,0 +1,194 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Background Image */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/static/images/wwe-13-cm-punk-sm-pank-fillip.jpg'); /* Path to background image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Semi-transparent */
+    z-index: -1; /* Ensure background is behind content */
+}
+
+/* Container for Content */
+.container {
+    position: relative;
+    z-index: 1; /* Ensure content is above the background */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Red shadow for WWE theme */
+}
+
+/* WWE Logo */
+.wwe-logo {
+    width: 300px; /* Adjust logo size */
+    margin-bottom: 20px;
+}
+
+/* Game Description */
+.game-description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Ready Question */
+.ready-question {
+    font-size: 1.5em;
+    color: #ff0000; /* WWE Red */
+    margin-bottom: 20px;
+}
+
+/* Hell Yeah Button */
+.hell-yeah-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff0000; /* WWE Red */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hell-yeah-button:hover {
+    background-color: #cc0000; /* Darker Red */
+    transform: scale(1.05);
+}
+
+/* Choose Level Page */
+.choose-level {
+    margin-top: 30px;
+}
+
+.choose-level h2 {
+    font-size: 2em;
+    color: #ff0000; /* WWE Red */
+    margin-bottom: 20px;
+}
+
+/* Level Selector Buttons */
+.level-selector {
+    margin-bottom: 30px;
+}
+
+.level-selector button {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff0000; /* WWE Red */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.level-selector button:hover {
+    background-color: #cc0000; /* Darker Red */
+    transform: scale(1.05);
+}
+
+/* Audio Player */
+audio {
+    width: 100%;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border-radius: 5px;
+}
+
+/* Options Buttons */
+#options {
+    margin-top: 30px;
+}
+
+#options button {
+    display: block;
+    width: 80%;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 15px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #333;
+    border: 2px solid #ff0000; /* WWE Red */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#options button:hover {
+    background-color: #ff0000; /* WWE Red */
+    transform: scale(1.05);
+}
+
+/* Score Display */
+#score {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff0000; /* WWE Red */
+    margin-top: 20px;
+    text-shadow: 1px 1px 3px rgba(255, 0, 0, 0.7); /* Red text shadow */
+}
+
+/* Next Button */
+#next {
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff0000; /* WWE Red */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#next:hover {
+    background-color: #cc0000; /* Darker Red */
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .level-selector button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    #options button {
+        width: 90%;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    #next {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}

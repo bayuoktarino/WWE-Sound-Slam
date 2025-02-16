@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WWE Sound Slam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+            color: white;
+            background: url('/static/images/wwe-13-cm-punk-sm-pank-fillip.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        #quiz-container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px white;
+            color: white;
+        }
+        .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .title-container img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        .title-container h1 {
+            font-size: 50px;
+            margin: 0;
+            color: white;
+        }
+        .option {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            padding: 15px;
+            background-color: #FF1A1A;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .option:hover {
+            background-color: #E50000;
+            transform: scale(1.05);
+        }
+        #timer {
+            font-size: 24px;
+            font-weight: bold;
+            color: yellow;
+            margin-top: 20px;
+        }
+        #score {
+            font-size: 22px;
+            color: cyan;
+        }
+        #result {
+            font-size: 28px;
+            font-weight: bold;
+            color: lime;
+        }
+        #appreciation-message {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #FFD700; /* Gold color for appreciation message */
+        }
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <div class="title-container">
+            <img src="/static/images/World-Wrestling-Entertainment-WWE-Logo-2014.png" alt="WWE Logo">
+            <h1>Sound Slam</h1>
+        </div>
+        <audio id="song" controls autoplay></audio>
+        <div id="options" class="options"></div>
+        <p id="score">Score: 0</p>
+        <div id="appreciation-message"></div>
+    </div>
+
+    <script>
+        // Get level from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const level = urlParams.get('level') || 'easy'; // Default to easy if level is not provided
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let questions = [];
+
+        // Function to load questions based on level
+        async function loadQuestions() {
+            const response = await fetch('/get_songs');
+            const data = await response.json();
+            questions = data[level]; // Get questions according to level
+            showQuestion();
+        }
+
+        // Function to display the question
+        function showQuestion() {
+            if (currentQuestionIndex < questions.length) {
+                const question = questions[currentQuestionIndex];
+                document.getElementById('song').src = `/static/audio/${question.file}`;
+                document.getElementById('song').play();
+
+                const options = [question.correct_answer, ...question.wrong_answers];
+                shuffleArray(options); // Shuffle the order of answers
+
+                const optionsContainer = document.getElementById('options');
+                optionsContainer.innerHTML = options
+                    .map(option => `<button class="option" onclick="checkAnswer('${option}')">${option}</button>`)
+                    .join('');
+            } else {
+                showAppreciationMessage(); // Show appreciation message after completion
+            }
+        }
+
+        // Function to check the answer
+        function checkAnswer(selectedAnswer) {
+            const question = questions[currentQuestionIndex];
+            if (selectedAnswer === question.correct_answer) {
+                score += 10; // Add 10 points for correct answer
+            }
+            document.getElementById('score').innerText = `Score: ${score}`;
+            currentQuestionIndex++;
+            showQuestion();
+        }
+
+        // Function to display appreciation message
+        function showAppreciationMessage() {
+            let message = '';
+            if (level === 'easy' && score >= 60) {
+                message = "Fantastic work! Your WWE knowledge is impressive—now take on the Medium level and keep the momentum going!";
+            } else if (level === 'medium' && score >= 60) {
+                message = "Great job! You’re proving yourself to be a true WWE fan. On to the next challenge!";
+            } else if (level === 'hard' && score >= 60) {
+                message = "Amazing! You’ve mastered the toughest level. You’re a WWE theme song legend!";
+            } else {
+                message = "Nice try! Keep practicing to improve your WWE theme song knowledge.";
+            }
+            document.getElementById('appreciation-message').innerText = message;
+        }
+
+        // Function to shuffle an array
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // Load questions when the page loads
+        loadQuestions();
+    </script>
+</body>
+</html>

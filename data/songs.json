@@ -1,0 +1,188 @@
+{
+    "easy": [
+        {
+            "name": "CM Punk",
+            "file": "easy/cm_punk.mp3",
+            "correct_answer": "CM Punk",
+            "wrong_answers": ["Daniel Bryan", "Samoa Joe", "Kevin Owens"]
+        },
+        {
+            "name": "Edge",
+            "file": "easy/edge.mp3",
+            "correct_answer": "Edge",
+            "wrong_answers": ["Randy Orton", "Jeff Hardy", "Batista"]
+        },
+        {
+            "name": "John Cena",
+            "file": "easy/john_cena.mp3",
+            "correct_answer": "John Cena",
+            "wrong_answers": ["The Miz", "Roman Reigns", "Bobby Lashley"]
+        },
+        {
+            "name": "Shawn Michaels",
+            "file": "easy/shawn_michaels.mp3",
+            "correct_answer": "Shawn Michaels",
+            "wrong_answers": ["Triple H", "Ric Flair", "Bret Hart"]
+        },
+        {
+            "name": "Stone Cold Steve Austin",
+            "file": "easy/stone_cold_steve_austin.mp3",
+            "correct_answer": "Stone Cold Steve Austin",
+            "wrong_answers": ["The Rock", "Goldberg", "Kane"]
+        },
+        {
+            "name": "The Rock",
+            "file": "easy/the_rock.mp3",
+            "correct_answer": "The Rock",
+            "wrong_answers": ["Big Show", "Booker T", "Kurt Angle"]
+        },
+        {
+            "name": "Triple H",
+            "file": "easy/triple_h.mp3",
+            "correct_answer": "Triple H",
+            "wrong_answers": ["Brock Lesnar", "Batista", "Kane"]
+        },
+        {
+            "name": "D-Generation X",
+            "file": "easy/dx.mp3",
+            "correct_answer": "D-Generation X",
+            "wrong_answers": ["Evolution", "The Shield", "The Usos"]
+        },
+        {
+            "name": "Rey Mysterio",
+            "file": "easy/rey_mysterio.mp3",
+            "correct_answer": "Rey Mysterio",
+            "wrong_answers": ["Penta", "Sin Cara", "Kalisto"]
+        },
+        {
+            "name": "Trish Stratus",
+            "file": "easy/trish_stratus.mp3",
+            "correct_answer": "Trish Stratus",
+            "wrong_answers": ["Lita", "Michelle McCool", "Beth Phoenix"]
+        }
+    ],
+    "medium": [
+        {
+            "name": "AJ Lee",
+            "file": "medium/aj_lee.mp3",
+            "correct_answer": "AJ Lee",
+            "wrong_answers": ["Paige", "Mickie James", "Sasha Banks"]
+        },
+        {
+            "name": "Christian",
+            "file": "medium/christian.mp3",
+            "correct_answer": "Christian",
+            "wrong_answers": ["Trish Stratus", "Chris Jericho", "Stacy Keibler"]
+        },
+        {
+            "name": "Cody Rhodes",
+            "file": "medium/cody_rhodes.mp3",
+            "correct_answer": "Cody Rhodes",
+            "wrong_answers": ["Randy Orton", "Seth Rollins", "CM Punk"]
+        },
+        {
+            "name": "Dolph Ziggler",
+            "file": "medium/dolph_ziggler.mp3",
+            "correct_answer": "Dolph Ziggler",
+            "wrong_answers": ["The Miz", "John Morrison", "Tyler Breeze"]
+        },
+        {
+            "name": "Drew McIntyre",
+            "file": "medium/drew_mcintyre.mp3",
+            "correct_answer": "Drew McIntyre",
+            "wrong_answers": ["Finn Bálor", "Vance Archer", "Justin Gabriel"]
+        },
+        {
+            "name": "Kane",
+            "file": "medium/kane.mp3",
+            "correct_answer": "Kane",
+            "wrong_answers": ["Chris Benoit", "Kevin Nash", "Rhyno"]
+        },
+        {
+            "name": "Randy Orton",
+            "file": "medium/randy_orton.mp3",
+            "correct_answer": "Randy Orton",
+            "wrong_answers": ["Jeff Hardy", "Zack Ryder", "Curt Hawkins"]
+        },
+        {
+            "name": "Jeff Hardy",
+            "file": "medium/jeff_hardy.mp3",
+            "correct_answer": "Jeff Hardy",
+            "wrong_answers": ["RVD", "Matt Hardy", "Shelton Benjamin"]
+        },
+        {
+            "name": "LA Knight",
+            "file": "medium/la_knight.mp3",
+            "correct_answer": "LA Knight",
+            "wrong_answers": ["Austin Theory", "Grayson Waller", "Cameron Grimes"]
+        },
+        {
+            "name": "The Undertaker",
+            "file": "medium/undertaker.mp3",
+            "correct_answer": "The Undertaker",
+            "wrong_answers": ["Booker T", "Chuck Palumbo", "Bubba Ray Dudley"]
+        }
+    ],
+    "hard": [
+        {
+            "name": "AJ Styles",
+            "file": "hard/aj_styles.mp3",
+            "correct_answer": "AJ Styles",
+            "wrong_answers": ["Omos", "Finn Bálor", "JD McDonagh"]
+        },
+        {
+            "name": "British Bulldog",
+            "file": "hard/british_bulldog.mp3",
+            "correct_answer": "British Bulldog",
+            "wrong_answers": ["King Booker", "King Barrett", "William Regal"]
+        },
+        {
+            "name": "Chelsea Green",
+            "file": "hard/chelsea_green.mp3",
+            "correct_answer": "Chelsea Green",
+            "wrong_answers": ["Raquel Rodriguez", "Liv Morgan", "Bianca Belair"]
+        },
+        {
+            "name": "Giulia",
+            "file": "hard/giulia.mp3",
+            "correct_answer": "Giulia",
+            "wrong_answers": ["Roxanne Perez", "Dakota Kai", "Stephanie Vaquer"]
+        },
+        {
+            "name": "Kairi Sane",
+            "file": "hard/kairi_sane.mp3",
+            "correct_answer": "Kairi Sane",
+            "wrong_answers": ["Iyo Sky", "Eva Marie", "Asuka"]
+        },
+        {
+            "name": "Logan Paul",
+            "file": "hard/logan_paul.mp3",
+            "correct_answer": "Logan Paul",
+            "wrong_answers": ["Grayson Waller", "Pat McAfee", "Bad Bunny"]
+        },
+        {
+            "name": "Tyson Kidd",
+            "file": "hard/tyson_kidd.mp3",
+            "correct_answer": "Tyson Kidd",
+            "wrong_answers": ["Austin Theory", "Cedric Alexander", "Johnny Gargano"]
+        },
+        {
+            "name": "Adam Cole",
+            "file": "hard/adam_cole.mp3",
+            "correct_answer": "Adam Cole",
+            "wrong_answers": ["Bobby Fish", "Roderick Strong", "Kyle O’Reilly"]
+        },
+        {
+            "name": "Jimmy Uso",
+            "file": "hard/jimmy_uso.mp3",
+            "correct_answer": "Jimmy Uso",
+            "wrong_answers": ["Jacob Fatu", "Tama Tonga", "Solo Sikoa"]
+        },
+        {
+            "name": "Mordecai",
+            "file": "hard/mordecai.mp3",
+            "correct_answer": "Mordecai",
+            "wrong_answers": ["Kevin Thorn", "Gangrel", "Mankind"]
+        }
+    ]
+}

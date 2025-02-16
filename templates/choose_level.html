@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Level - WWE Sound Slam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            text-align: center;
+            color: white;
+            background: url('/static/images/wwe-13-cm-punk-sm-pank-fillip.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        #choose-level {
+            max-width: 600px;
+            margin: 200px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 15px white;
+        }
+        .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .title-container img {
+            height: 60px;
+            margin-right: 10px;
+        }
+        .title-container h1 {
+            font-size: 50px;
+            margin: 0;
+            color: white;
+        }
+        #choose-level h2 {
+            font-size: 40px;
+            color: white;
+        }
+        #choose-level button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 24px;
+            background-color: #FF1A1A;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        #choose-level button:hover {
+            background-color: #E50000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div id="choose-level">
+        <div class="title-container">
+            <img src="/static/images/World-Wrestling-Entertainment-WWE-Logo-2014.png" alt="WWE Logo">
+            <h1>Sound Slam</h1>
+        </div>
+        <h2>Choose Your Level</h2>
+        <button onclick="startGame('easy')">Easy</button>
+        <button onclick="startGame('medium')">Medium</button>
+        <button onclick="startGame('hard')">Hard</button>
+    </div>
+
+    <!-- Audio CM Punk -->
+    <audio id="cm-punk-theme" src="/static/audio/cm_punk_full.mp3" autoplay loop></audio>
+
+    <script>
+        // Function to start the game based on the selected level
+        function startGame(level) {
+            window.location.href = `/game?level=${level}`; // Redirect to the game page with the selected level
+        }
+    </script>
+</body>
+</html>
